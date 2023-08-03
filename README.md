@@ -4,10 +4,6 @@ https://www.youtube.com/watch?v=6YZvp2GwT0A
 Jenkins k8s reference 
 https://www.jenkins.io/doc/book/installing/kubernetes/ 
 
-Install Jenkins with docker compose 
-https://www.youtube.com/watch?v=OSJr-BMg2YQ
-
-
 Jenkins docker compose setup
 https://github.com/Douglas0n/jenkins-docker 
 how to install
@@ -29,12 +25,6 @@ $ docker logs jenkins | less
 
 sudo docker exec ${CONTAINER_ID or CONTAINER_NAME} cat /var/jenkins_home/secrets/initialAdminPassword
 
-sudo docker exec 3a92623e39c0 cat /var/jenkins_home/secrets/initialAdminPassword
-
-
-3a92623e39c0
-
-password: 0834511de91241c584d54f340f505ee4
 ```
 
 - Go to http://localhost:8080/ and enter the password. 
@@ -92,3 +82,28 @@ Agents/Minions
 Agent tupes:
 - Pernament Agents 
   -- Dedicated Servers for running jobs 
+- Cloud agents
+  -- Ephemeral/Dynamic Agents spun up on demand 
+
+to make a doker as cloud agent 
+
+### Kubernetes plugin for Jenkins 
+
+Build tyoes:
+- Freestyle Build
+  -- simplest method to create a build
+  -- feels like a shell scripting
+- Pipelines 
+  -- Use the Groovy Syntax 
+  -- Use stages to break down Components of builds 
+
+  
+  Pipeline Stages:
+  - clone
+  - build
+  - test
+  - package
+  - deploy
+
+
+
