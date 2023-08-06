@@ -145,3 +145,13 @@ Thats how you use cloud atforms such as docker, K8s,etc.
 Can also select cloud providers 
 Go to Plugin manager and install Docker 
 
+Need to add Docker URI - IP address of remote server
+and server credentials 
+
+If you are running jenkins in container, in the docker host URI field you have to enter unix or tcp address of the docker host. But since you are running jenkins as container, the container CAN NOT reach docker host unix port 
+
+So we have to run another container that can mediate between docker host and jenkins container. It will publich docker host's unix port as its tcp port. Follow the instructions to create socat container: https://hub.docker.com/r/alpine/socat 
+
+After the creating socat container, you can go back the docker configuration and enter: tcp://socat-container-ip:2375 
+
+Test connection should succeed now
