@@ -191,6 +191,7 @@ https://hub.docker.com/r/jenkins/agent/
 
 jenkins/agent.alpine-jdk11 
 
+jenkins/agent.python-jdk11 
 
 Instance capacity - how many agents it can spawn 
 can make 2 
@@ -210,4 +211,21 @@ Then Save
 Then click on Build Now 
 
 43m 
+
+how to trigger automatically scripts
+
+Configure job -> Build triggers -> Pull SCM - 
+it monitores gihtub repositories and checks for any changes 
+
+Especially if your jenkins master is behind firewall 
+
+IN Schedule needs to add:
+
+*/5**** 
+
+it means that it will be check every 5 minutes and this is best pracice with Jenkins 
+
+Hit Save 
+
+
 
