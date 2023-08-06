@@ -152,6 +152,50 @@ If you are running jenkins in container, in the docker host URI field you have t
 
 So we have to run another container that can mediate between docker host and jenkins container. It will publich docker host's unix port as its tcp port. Follow the instructions to create socat container: https://hub.docker.com/r/alpine/socat 
 
+```bash
+$ docker pull alpine/socat
+
+$ docker run -d --restart=always \
+    -p 127.0.0.1:2376:2375 \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    alpine/socat \
+    tcp-listen:2375,fork,reuseaddr unix-connect:/var/run/docker.sock
+```
+
 After the creating socat container, you can go back the docker configuration and enter: tcp://socat-container-ip:2375 
 
-Test connection should succeed now
+Test connection should succeed now 
+
+```bash
+$ docker inspect sockat_container_id 
+```
+
+For example
+172.17.0.2:2375
+### Create a docker agent template 
+
+Then open cloud
+
+add docker agent templates 
+
+add label: docker-agent-alpine 
+should be enabled 
+
+add sane name with label 
+
+Docker image: 
+it shouf containt an image of jenkins you wanna use 
+you can point your own jenkins docker image 
+
+https://hub.docker.com/r/jenkins/agent/ 
+
+jenkins/agent.alpine-jdk11 
+
+
+Instance capacity - how many agents it can spawn 
+can make 2 
+
+
+Remote File System Root: 
+/home/jenkins 
+
