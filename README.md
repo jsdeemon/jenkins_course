@@ -221,7 +221,10 @@ Especially if your jenkins master is behind firewall
 
 IN Schedule needs to add:
 
+```bash
 */5**** 
+```
+
 
 it means that it will be check every 5 minutes and this is best pracice with Jenkins 
 
