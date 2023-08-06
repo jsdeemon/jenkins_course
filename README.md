@@ -199,3 +199,15 @@ can make 2
 Remote File System Root: 
 /home/jenkins 
 
+Then apply
+
+- Then open jobs -> job you wanna deploy 
+options General -> Restrict where this project canbe run 
+Use label: docker-agent-alpine 
+
+Then Save 
+
+Then click on Build Now 
+
+43m 
+
