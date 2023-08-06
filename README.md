@@ -230,5 +230,48 @@ it means that it will be check every 5 minutes and this is best pracice with Jen
 
 Hit Save 
 
+### CI/CD Pipelines using Groovy language
+50m 
 
+New Item -> Pipeline 
+
+https://github.com/devopsjourney1/jenkins-101/blob/master/Jenkinsfile.template 
+
+Basic template:
+
+```groovy
+pipeline {
+    agent { 
+        node {
+            label 'jenkins-agent-goes-here'
+            }
+      }
+    stages {
+        stage('Build') {
+            steps {
+                echo "Building.."
+                sh '''
+                echo "doing build stuff.."
+                '''
+            }
+        }
+        stage('Test') {
+            steps {
+                echo "Testing.."
+                sh '''
+                echo "doing test stuff..
+                '''
+            }
+        }
+        stage('Deliver') {
+            steps {
+                echo 'Deliver....'
+                sh '''
+                echo "doing delivery stuff.."
+                '''
+            }
+        }
+    }
+}
+```
 
