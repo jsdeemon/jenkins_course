@@ -284,3 +284,7 @@ Three stages of Pipeline:
 
 See the real example in Jenkinsfile 
 
+- Install/setup Master
+- Setup Cloud Agents 
+- Freestyle project
+- Declarative Pipelines
