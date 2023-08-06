@@ -1,6 +1,11 @@
 ### Jenkins course 
 https://www.youtube.com/watch?v=6YZvp2GwT0A 
 
+Another Jenkins course from FreeCodeCamp:
+https://www.youtube.com/watch?v=f4idgaq2VqA&t=78s
+
+https://github.com/devopsjourney1/jenkins-101
+
 Jenkins k8s reference 
 https://www.jenkins.io/doc/book/installing/kubernetes/ 
 
@@ -106,4 +111,37 @@ Build tyoes:
   - deploy
 
 
+We should setup agents 
+
+app to use with jenkins 
+https://github.com/faraday-academy/curriculum-app
+
+
+Create a new item 
+my_first_job 
+
+select freestyle project
+
+Jenkins makes a folder based on the job 
+
+22 mins
+
+### Setting up agents and making pipelines using groovy syntax 
+
+Dashboard -> manage jenkins -> manage nodes and clouds 
+Two opsions
+- New node
+- Configure clouds  
+
+- New node - is how to configure Linux or Windows server that you have 
+-- Jenkins connects to the derver agent via SSH and distributes jobs there. 
+
+But now people usually configuting clouds 
+
+Thats how you use cloud atforms such as docker, K8s,etc.
+
+- Add new Cloud )Choose Kubernetes) 
+
+Can also select cloud providers 
+Go to Plugin manager and install Docker 
 
