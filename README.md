@@ -275,3 +275,12 @@ pipeline {
 }
 ```
 
+This is a declarative Pipeline - is an addition to Jenkins Pipelines which presents more simplified and opinionated syntax on top of the Pipeline sub-systems 
+
+Three stages of Pipeline:
+- Build
+- Test 
+- Deliver  
+
+See the real example in Jenkinsfile 
+
