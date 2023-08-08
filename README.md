@@ -1,6 +1,9 @@
 ### Jenkins course 
 https://www.youtube.com/watch?v=6YZvp2GwT0A 
 
+### Complete Jenkins pipeline tutorial
+https://youtu.be/7KCS70sCoK0
+
 Another Jenkins course from FreeCodeCamp:
 https://www.youtube.com/watch?v=f4idgaq2VqA&t=78s
 
@@ -287,4 +290,15 @@ See the real example in Jenkinsfile
 - Install/setup Master
 - Setup Cloud Agents 
 - Freestyle project
-- Declarative Pipelines
+- Declarative Pipelines 
+
+### Jenkinsfile
+Jenkinsfile helps to create and configure jobs
+- Jenkinsfile is a pipeline as a code 
+
+- scripted pipeline 
+
+Pipeline syntax:
+- scripted pipeline - first syntax, groovy engine - advanced scripting capabilities, high flexibility -hard to start
+- declarative pipeline - recent addition - easy to get started, but not so powerful
+
