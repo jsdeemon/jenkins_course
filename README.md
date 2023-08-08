@@ -293,6 +293,8 @@ See the real example in Jenkinsfile
 - Declarative Pipelines 
 
 ### Jenkinsfile
+https://gitlab.com/nanuchi/techworld-js-docker-demo-app/-/blob/dev/Jenkinsfile 
+
 Jenkinsfile helps to create and configure jobs
 - Jenkinsfile is a pipeline as a code 
 
